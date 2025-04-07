@@ -8,7 +8,7 @@ pipeline {
 
     environment {
         SONARQUBE_SERVER = 'sonar'
-        DOCKER_IMAGE = '/springboot-app'
+        DOCKER_IMAGE = 'devopsspringapp'
         VERSION = 'latest'
     }
 
