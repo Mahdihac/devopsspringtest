@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     environment {
-        SONARQUBE_SERVER = 'sonar'
         DOCKER_IMAGE = 'devopsspringapp'
         VERSION = 'latest'
     }
