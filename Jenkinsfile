@@ -1,11 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven_3'
-        jdk 'Java_17'
-    }
-
     environment {
         SONARQUBE_SERVER = 'sonar'
         DOCKER_IMAGE = 'devopsspringapp'
