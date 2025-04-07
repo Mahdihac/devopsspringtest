@@ -15,7 +15,13 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://your.repo.url/spring-boot-app.git'
+                git 'https://github.com/Mahdihac/devopsspringtest.git'
+            }
+        }
+
+        stage('Build JAR') {
+            steps {
+                sh 'mvn clean package -DskipTests'
             }
         }
 
@@ -24,12 +30,6 @@ pipeline {
                 withSonarQubeEnv("${env.SONARQUBE_SERVER}") {
                     sh 'mvn clean verify sonar:sonar'
                 }
-            }
-        }
-
-        stage('Build JAR') {
-            steps {
-                sh 'mvn clean package -DskipTests'
             }
         }
 
@@ -49,6 +49,5 @@ pipeline {
                 }
             }
         }
-        */
     }
 }
