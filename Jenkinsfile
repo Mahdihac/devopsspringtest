@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'devopsspringapp'
+        DOCKER_IMAGE = 'mahdihch/devopsspringapp'
         VERSION = 'latest'
     }
 
